@@ -1,0 +1,30 @@
+import * as React from 'react'
+import { HStack, Link, Divider } from '@chakra-ui/react'
+import { Link as DomLink } from 'react-router-dom'
+
+import routes from 'routes'
+
+const Nav = () => {
+  return (
+    <>
+      <HStack py={4} pr={['2rem', '6.8rem']} pl={['2rem', '8rem']} spacing={12}>
+        <DomLink to='/'>
+          <Link fontWeight='extrabold' fontSize='lg' href='/' variant='link'>
+            Pena.id
+          </Link>
+        </DomLink>
+
+        <HStack fontSize='md' flexGrow={1}>
+          {routes.map(([text, href]) => (
+            <DomLink key={text} to={href}>
+              <Link p={4}>{text}</Link>
+            </DomLink>
+          ))}
+        </HStack>
+      </HStack>
+      <Divider />
+    </>
+  )
+}
+
+export default Nav
