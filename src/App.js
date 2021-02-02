@@ -6,6 +6,7 @@ import { Fonts } from 'theme/components/Font'
 import theme from 'theme'
 
 import Nav from 'components/Nav'
+import Footer from 'components/Footer'
 import Home from 'Pages/Home'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             </Route>
           </Switch>
         </Stack>
+        <Footer />
       </Router>
     </ChakraProvider>
   )

@@ -9,7 +9,7 @@ class newsApi {
       const res = await axios.get(`${baseUrl}/top-headlines`, {
         params: {
           country: 'id',
-          pageSize: 4,
+          pageSize: 6,
           apiKey,
         },
       })

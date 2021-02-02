@@ -3,6 +3,7 @@ import { HStack, Link, Divider } from '@chakra-ui/react'
 import { Link as DomLink } from 'react-router-dom'
 
 import routes from 'routes'
+import siteConfig from 'site-config'
 
 const Nav = () => {
   return (
@@ -10,7 +11,7 @@ const Nav = () => {
       <HStack py={4} pr={['2rem', '6.8rem']} pl={['2rem', '8rem']} spacing={12}>
         <DomLink to='/'>
           <Link fontWeight='extrabold' fontSize='lg' href='/' variant='link'>
-            Pena.id
+            {siteConfig.title}
           </Link>
         </DomLink>
 

@@ -1,6 +1,12 @@
 import { extendTheme } from '@chakra-ui/react'
 
+import Link from './components/Link'
+import styles from './style'
+
 const overrides = {
+  components: {
+    Link,
+  },
   fonts: {
     heading: 'PT Sans',
     body: 'Raleway',
@@ -24,6 +30,7 @@ const overrides = {
     '7xs': '6rem',
     '8xs': '4rem',
   },
+  styles,
 }
 
 export default extendTheme(overrides)

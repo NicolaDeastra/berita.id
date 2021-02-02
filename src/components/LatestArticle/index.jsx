@@ -22,7 +22,7 @@ const LatestArticle = () => {
   }, [])
 
   return (
-    <SimpleGrid columns={2} spacing={2}>
+    <SimpleGrid columns={3} spacing={2}>
       {articles
         ? articles.map((article) => (
             <Card
