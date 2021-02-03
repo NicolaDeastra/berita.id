@@ -13,7 +13,7 @@ const Footer = () => {
       align={['center', 'normal']}
       py={4}
       pr={['2rem', '6.8rem']}
-      pl={['2rem', '8rem']}
+      pl={['2rem', '11rem']}
     >
       <Flex
         justify='space-between'
@@ -31,6 +31,7 @@ const Footer = () => {
       </Flex>
       {siteConfig.footer.rotes.map((route) => (
         <VStack
+          key={route.heading}
           align='left'
           flexGrow={1}
           direction='column'

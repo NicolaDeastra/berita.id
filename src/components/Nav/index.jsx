@@ -8,9 +8,14 @@ import siteConfig from 'site-config'
 const Nav = () => {
   return (
     <>
-      <HStack py={4} pr={['2rem', '6.8rem']} pl={['2rem', '8rem']} spacing={12}>
+      <HStack
+        py={4}
+        pr={['2rem', '6.8rem']}
+        pl={['2rem', '11rem']}
+        spacing={12}
+      >
         <DomLink to='/'>
-          <Link fontWeight='extrabold' fontSize='lg' href='/' variant='link'>
+          <Link fontWeight='extrabold' fontSize='lg' variant='link'>
             {siteConfig.title}
           </Link>
         </DomLink>

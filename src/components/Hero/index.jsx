@@ -6,11 +6,11 @@ import siteConfig from 'site-config'
 const Hero = () => {
   return (
     <Center
-      h='lg'
-      pt={['0rem', '0rem']}
+      h='md'
+      pt={['0rem', '4rem']}
       align='center'
       flexDirection={{ base: 'column', md: 'row' }}
-      mb={{ base: 20, md: '7rem' }}
+      mb={{ base: 20, md: '8rem' }}
     >
       <VStack spacing={6} px={['2rem', '10rem']}>
         <Heading
