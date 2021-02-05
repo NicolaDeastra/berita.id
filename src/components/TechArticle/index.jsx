@@ -34,11 +34,7 @@ const TechArticle = () => {
           <SkeletonText mt='4' noOfLines={4} spacing='4' />
         </Box>
       ) : (
-        <ArticleGrid
-          articles={state.articles}
-          columns={3}
-          heading='Tech article'
-        />
+        <ArticleGrid articles={state.articles} heading='Tech article' />
       )}
     </>
   )

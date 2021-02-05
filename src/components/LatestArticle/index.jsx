@@ -34,11 +34,7 @@ const LatestArticle = () => {
           <SkeletonText mt='4' noOfLines={4} spacing='4' />
         </Box>
       ) : (
-        <ArticleGrid
-          articles={state.headlines}
-          columns={3}
-          heading='Latest article'
-        />
+        <ArticleGrid articles={state.headlines} heading='Latest article' />
       )}
     </>
   )

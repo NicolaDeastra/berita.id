@@ -5,11 +5,11 @@ import Card from 'components/Card'
 
 const ArticleGrid = ({ articles, heading, columns }) => {
   return (
-    <VStack mb='12' pl='9' align='flex-start'>
-      <Heading fontSize='xl' pl='5' mb='2'>
+    <VStack mb={[18, 12]} pl={[0, 9]} align='flex-start'>
+      <Heading fontSize='xl' pl={[2, 5]} mb='2'>
         {heading}
       </Heading>
-      <SimpleGrid columns={columns} spacing={2}>
+      <SimpleGrid columns={[2, 3]} spacing={[0, 2]}>
         {articles.map((article) => (
           <Card
             key={article.title}
