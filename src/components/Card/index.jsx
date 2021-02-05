@@ -1,7 +1,7 @@
 import * as React from 'react'
 import moment from 'moment'
 
-import { Box, Image, Flex, Badge, Text } from '@chakra-ui/react'
+import { Box, Image, Text } from '@chakra-ui/react'
 
 const Card = ({ imageUrl, title, publishedAt, author }) => {
   return (
@@ -14,13 +14,11 @@ const Card = ({ imageUrl, title, publishedAt, author }) => {
         src={imageUrl}
         alt={title}
       />
-      <Flex align='baseline' mt={2}>
-        <Badge size={6}>{author}</Badge>
-      </Flex>
+
       <Text
         mt={2}
         fontSize='md'
-        minH='120px'
+        minH='80px'
         fontWeight='semibold'
         lineHeight='short'
       >

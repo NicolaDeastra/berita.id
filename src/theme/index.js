@@ -3,7 +3,13 @@ import { extendTheme } from '@chakra-ui/react'
 import Link from './components/Link'
 import styles from './style'
 
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
+
 const overrides = {
+  config,
   components: {
     Link,
   },

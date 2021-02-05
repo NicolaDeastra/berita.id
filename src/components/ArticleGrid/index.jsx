@@ -10,17 +10,14 @@ const ArticleGrid = ({ articles, heading, columns }) => {
         {heading}
       </Heading>
       <SimpleGrid columns={columns} spacing={2}>
-        {articles
-          ? articles.map((article) => (
-              <Card
-                key={article.title}
-                imageUrl={article.urlToImage}
-                title={article.title}
-                author={article.source.name}
-                publishedAt={article.publishedAt}
-              />
-            ))
-          : null}
+        {articles.map((article) => (
+          <Card
+            key={article.title}
+            imageUrl={article.image.small}
+            title={article.title}
+            publishedAt={article.isoDate}
+          />
+        ))}
       </SimpleGrid>
     </VStack>
   )
