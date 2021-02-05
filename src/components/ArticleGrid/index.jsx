@@ -5,7 +5,7 @@ import Card from 'components/Card'
 
 const ArticleGrid = ({ articles, heading, columns }) => {
   return (
-    <VStack mb={[18, 12]} pl={[12, 9]} align='flex-start'>
+    <VStack mb={[18, 12]} pl={[5, 9]} align='flex-start'>
       <Heading fontSize='xl' pl={[2, 5]} mb='2'>
         {heading}
       </Heading>
