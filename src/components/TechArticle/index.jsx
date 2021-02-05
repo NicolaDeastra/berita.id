@@ -5,17 +5,17 @@ import { Box, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 import newsApi from 'services'
 import ArticleGrid from 'components/ArticleGrid'
 
-const LatestArticle = () => {
-  const [state, setState] = React.useState({ headlines: [], loading: true })
+const TechArticle = () => {
+  const [state, setState] = React.useState({ articles: [], loading: true })
 
   React.useEffect(() => {
     async function fetch() {
       try {
-        const articles = await newsApi.getTopHeadlines()
+        const articles = await newsApi.getTechArticle()
         const newArticles = articles.data.data.slice(0, 6)
 
         setState({
-          headlines: newArticles,
+          articles: newArticles,
           loading: false,
         })
       } catch (error) {
@@ -35,13 +35,13 @@ const LatestArticle = () => {
         </Box>
       ) : (
         <ArticleGrid
-          articles={state.headlines}
+          articles={state.articles}
           columns={3}
-          heading='Latest article'
+          heading='Tech article'
         />
       )}
     </>
   )
 }
 
-export default LatestArticle
+export default TechArticle

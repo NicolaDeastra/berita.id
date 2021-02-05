@@ -1,11 +1,11 @@
 import * as React from 'react'
 import moment from 'moment'
 
-import { Box, Image, Text } from '@chakra-ui/react'
+import { Box, Image, Text, Flex, Badge, Link } from '@chakra-ui/react'
 
-const Card = ({ imageUrl, title, publishedAt, author }) => {
+const Card = ({ imageUrl, title, publishedAt, contentSnippet, link }) => {
   return (
-    <Box p='5' mb='10' maxW='300px' maxH='345px'>
+    <Box p='5' maxW='300px' maxH='500px'>
       <Image
         borderRadius='md'
         minH='155px'
@@ -14,19 +14,23 @@ const Card = ({ imageUrl, title, publishedAt, author }) => {
         src={imageUrl}
         alt={title}
       />
-
-      <Text
-        mt={2}
-        fontSize='md'
-        minH='80px'
-        fontWeight='semibold'
-        lineHeight='short'
-      >
-        {title}
-      </Text>
-      <Text mt={2}>
-        {moment(publishedAt).local().format('YYYY-MM-DD HH:mm')}
-      </Text>
+      <Flex align='baseline' mt={2}>
+        <Badge size={6}>
+          {moment(publishedAt).local().format('YYYY-MM-DD HH:mm')}
+        </Badge>
+      </Flex>
+      <Link href={link} isExternal>
+        <Text
+          mt={2}
+          fontSize='md'
+          minH='90px'
+          fontWeight='semibold'
+          lineHeight='short'
+        >
+          {title}
+        </Text>
+      </Link>
+      <Text>{contentSnippet}</Text>
     </Box>
   )
 }

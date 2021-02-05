@@ -13,22 +13,15 @@ class newsApi {
     }
   }
 
-  // static getLatestArticle = async () => {
-  //   try {
-  //     const res = await axios.get(`${baseUrl}/everything`, {
-  //       params: {
-  //         q: 'indonesia',
-  //         apiKey,
-  //         pageSize: 6,
-  //         sortBy: 'publishedAt',
-  //       },
-  //     })
+  static getTechArticle = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}/tech`)
 
-  //     return await res
-  //   } catch (error) {
-  //     return error
-  //   }
-  // }
+      return res
+    } catch (error) {
+      return error
+    }
+  }
 }
 
 export default newsApi

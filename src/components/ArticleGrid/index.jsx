@@ -16,6 +16,8 @@ const ArticleGrid = ({ articles, heading, columns }) => {
             imageUrl={article.image.small}
             title={article.title}
             publishedAt={article.isoDate}
+            contentSnippet={article.contentSnippet}
+            link={article.link}
           />
         ))}
       </SimpleGrid>
