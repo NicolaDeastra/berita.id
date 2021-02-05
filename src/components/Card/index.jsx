@@ -5,7 +5,7 @@ import { Box, Image, Text, Flex, Badge, Link } from '@chakra-ui/react'
 
 const Card = ({ imageUrl, title, publishedAt, contentSnippet, link }) => {
   return (
-    <Box p={[2, 5]} mb={[4, 0]} maxW='300px' maxH='500px'>
+    <Box p={[2, 5]} mb={[6, 0]} maxW='300px' maxH='500px'>
       <Image
         borderRadius='md'
         minH='155px'
@@ -23,7 +23,7 @@ const Card = ({ imageUrl, title, publishedAt, contentSnippet, link }) => {
         <Text
           mt={2}
           fontSize={['sm', 'md']}
-          minH='90px'
+          minH={['60px', '90px']}
           fontWeight='semibold'
           lineHeight='short'
         >
